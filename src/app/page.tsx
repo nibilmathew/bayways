@@ -22,6 +22,8 @@ export default function Home() {
         <img className='w-full h-[480px]' src='./plane5.jpg' alt='background'></img>
       </div>
 
+      <div className='justify-between'>
+        {/* lady flex section */}
       <div className='relative flex ml-[4rem] items-center h-[240px] w-[90%] rounded-2xl overflow-hidden mt-[40px]'>
         <img className='w-full h-full'src='./lady.png' alt='lady_background'></img>
         <div className='absolute flex flex-col ml-[2rem] w-[60%] h-[78%] p-5 bg-gray-100 opacity-90'>
@@ -65,6 +67,7 @@ export default function Home() {
         <button type='button' className='bg-white w-[6rem] p-2 rounded-lg text-black text-md font-arial border border-black hover:bg-black hover:text-white'>Feedback</button>
         </div>
 
+      </div>
       </div>
 
     </main>
