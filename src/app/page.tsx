@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Searching from './components/searching'
 
 export default function Home() {
   return (
@@ -16,12 +17,17 @@ export default function Home() {
           <img className='h-[20px] w-[20px]' src='./user.png' alt='user_logo'></img>
         </div>
       </nav>
+      
+      
 
       {/* background image */}
-      <div className='flex w-full h-[480px]'>
+      <div className='relative w-full h-[480px]'>
         <img className='w-full h-[480px]' src='./plane5.jpg' alt='background'></img>
+        <div className='absolute top-0  w-full h-full flex items-center ml-[100px] pb-[30px]'>
+          <Searching />
+        </div>
       </div>
-
+      
       <div className='justify-between'>
         {/* lady flex section */}
       <div className='relative flex ml-[4rem] items-center h-[240px] w-[90%] rounded-2xl overflow-hidden mt-[40px]'>

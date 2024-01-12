@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 // File: C:\Users\sanjo\Documents\bayways\src\app\page.tsx
+=======
+// File: C:\Programming\DBMS project\bayways\src\app\page.tsx
+>>>>>>> 6c11d0c6489737e3bdd05cda9b27e708c9670875
 import * as entry from '../../../src/app/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
