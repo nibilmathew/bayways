@@ -4,7 +4,6 @@ import Searching from './components/searching'
 export default function Home() {
   return (
     <main className='flex flex-col w-full h-full min-h-screen bg-white'>
-
       {/* navigation bar */}
       <nav className='flex items-center justify-between bg-white px-[4rem] py-2'>
         <div>
@@ -77,5 +76,6 @@ export default function Home() {
       </div>
 
     </main>
+    
   )
 }
