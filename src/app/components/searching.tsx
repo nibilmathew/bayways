@@ -11,6 +11,7 @@ const Searching: React.FC = () => {
     };
 
   return (
+    
     <div>
       <div className="flex flex-col bg-[#f9f8f5] text-black w-[600px] h-[300px] rounded-[15px] pl-[23px] opacity-75 " >
         <div className="font-semibold pl-[50px]">International</div>
