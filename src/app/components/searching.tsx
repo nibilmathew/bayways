@@ -15,7 +15,7 @@ const Searching: React.FC = () => {
 
   return (
     
-      <div className="flex flex-col bg-[#f9f8f5] text-black w-[600px] h-[300px] rounded-[15px] pl-[23px] opacity-95">
+      <div className="flex flex-col bg-[#f9f8f5] text-black w-[580px] h-[300px] rounded-[15px] pl-[23px] opacity-95">
         <Tabs>
           <TabList>
           <Tab> International</Tab>
