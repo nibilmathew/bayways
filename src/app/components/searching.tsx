@@ -79,7 +79,7 @@ const Searching: React.FC = () => {
                 onChange={() => setIsChecked(!isChecked)}
                 className="w-[25px] h-[25px] mr-2"
               />
-              <label htmlFor="checkbox" className="text-[14px]">Pay with Miles</label>
+              <label htmlFor="checkbox" className="text-[14px] ">Pay with Miles</label>
             </div> 
 
             <div className='text-white opacity-100'>
