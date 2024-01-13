@@ -1,6 +1,6 @@
-/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src\\app\\layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
-  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[2].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[11].oneOf[2].use[2]!./node_modules/next/font/google/target.css?{"path":"src/app/layout.tsx","import":"Inter","arguments":[{"subsets":["latin"]}],"variableName":"inter"} ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /* cyrillic-ext */
 @font-face {
   font-family: '__Inter_e66fe9';
@@ -564,6 +564,9 @@ video {
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.visible {
+  visibility: visible;
+}
 .absolute {
   position: absolute;
 }
@@ -615,6 +618,9 @@ video {
 .ml-\[30px\] {
   margin-left: 30px;
 }
+.ml-\[34\%\] {
+  margin-left: 34%;
+}
 .ml-\[35\%\] {
   margin-left: 35%;
 }
@@ -626,6 +632,9 @@ video {
 }
 .mr-\[37px\] {
   margin-right: 37px;
+}
+.mt-2 {
+  margin-top: 0.5rem;
 }
 .mt-3 {
   margin-top: 0.75rem;
@@ -648,9 +657,6 @@ video {
 .mt-\[50px\] {
   margin-top: 50px;
 }
-.ml-\[15px\] {
-  margin-left: 15px;
-}
 .flex {
   display: flex;
 }
@@ -672,6 +678,9 @@ video {
 .h-\[300px\] {
   height: 300px;
 }
+.h-\[30px\] {
+  height: 30px;
+}
 .h-\[35px\] {
   height: 35px;
 }
@@ -689,6 +698,9 @@ video {
 }
 .h-\[78\%\] {
   height: 78%;
+}
+.h-auto {
+  height: auto;
 }
 .h-full {
   height: 100%;
@@ -717,17 +729,20 @@ video {
 .w-\[260px\] {
   width: 260px;
 }
+.w-\[40\%\] {
+  width: 40%;
+}
 .w-\[400px\] {
   width: 400px;
 }
 .w-\[45\%\] {
   width: 45%;
 }
-.w-\[580px\] {
-  width: 580px;
-}
 .w-\[60\%\] {
   width: 60%;
+}
+.w-\[600px\] {
+  width: 600px;
 }
 .w-\[65\%\] {
   width: 65%;
@@ -747,9 +762,6 @@ video {
 }
 .w-full {
   width: 100%;
-}
-.w-\[600px\] {
-  width: 600px;
 }
 .cursor-pointer {
   cursor: pointer;
@@ -816,6 +828,9 @@ video {
 .border {
   border-width: 1px;
 }
+.border-\[0\.4px\] {
+  border-width: 0.4px;
+}
 .border-\[0\.5px\] {
   border-width: 0.5px;
 }
@@ -847,6 +862,10 @@ video {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
+.bg-blue-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
+}
 .bg-blue-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
@@ -858,6 +877,10 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 .bg-gradient-to-r {
   background-image: linear-gradient(to right, var(--tw-gradient-stops));
@@ -1071,9 +1094,32 @@ body {
     rgb(var(--background-start-rgb));
 }
 
+.hover\:scale-95:hover {
+  --tw-scale-x: .95;
+  --tw-scale-y: .95;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-100:hover {
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.hover\:scale-105:hover {
+  --tw-scale-x: 1.05;
+  --tw-scale-y: 1.05;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-blue-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover {
