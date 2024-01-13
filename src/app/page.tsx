@@ -23,7 +23,7 @@ export default function Home() {
       <div className='relative w-full h-[480px]'>
         <img className='w-full h-[480px]' src='./plane5.jpg' alt='background'></img>
         <div className='absolute top-0  w-full h-full flex items-center ml-[100px] pb-[30px]'>
-          <Searching />
+          <Searching/>
         </div>
       </div>
       

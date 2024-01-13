@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"Sr+gz9BGyHsn/VSmlc4l+M1gR0/JRUnY9cVE2IjHiCQ=\"\n}"
-=======
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"o5AYcL7Vl1n4QQiWsSLXqQmDdPYRlhZIHk1SBZJFBsY=\"\n}"
->>>>>>> 6c11d0c6489737e3bdd05cda9b27e708c9670875
-=======
-self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"Yded2gU+8s7OqIixQkT2j2SZF9fR9HjLKaOZwe1H2Co=\"\n}"
->>>>>>> 0c08a02 (script)
+self.__RSC_SERVER_MANIFEST="{\n  \"node\": {},\n  \"edge\": {},\n  \"encryptionKey\": \"qM76ZQRAmRj4gtbMHf5HfzVpyBF8TI/sAK/EhAs3UWQ=\"\n}"
