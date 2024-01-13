@@ -8,7 +8,7 @@ const feedbackModal = () => {
     <div className='flex flex-col items-center'>
     <div className='flex h-auto'>
         <button type='button'
-        className='bg-black w-[6rem] p-2 rounded-lg text-white text-md font-arial border border-black hover:scale-105'
+        className='bg-black w-[6rem] p-2 rounded-lg text-white text-md font-arial border border-black hover:scale-125 transition duration-300 hover:duration-300'
         onClick={() => setShowModal(true)}>feedback
         </button>  
     </div>

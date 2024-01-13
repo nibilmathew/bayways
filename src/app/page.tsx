@@ -100,7 +100,7 @@ export default function Home() {
         </div>
 
         <div className='flex flex-col items-center justify-center text-gray-600 text-sm font-arial space-y-2 py-[1rem]'>
-        <p className='#'>Your feedback is really important, and we love hearing what you think.</p>
+        <p className='pb-[10px]'>Your feedback is really important, and we love hearing what you think.</p>
         <FeedbackModal/>
         </div>
 
