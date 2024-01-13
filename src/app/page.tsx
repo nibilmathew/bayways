@@ -18,7 +18,6 @@ export default function Home() {
         </div>
       </nav>
       
-      
 
       {/* background image */}
       <div className='relative w-full h-[480px]'>
