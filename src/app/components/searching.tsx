@@ -14,7 +14,7 @@ const Searching: React.FC = () => {
   };
 
   return (
-    <div>
+    
       <div className="flex flex-col bg-[#f9f8f5] text-black w-[600px] h-[300px] rounded-[15px] pl-[23px] opacity-75">
         <Tabs>
           <TabList>
@@ -24,13 +24,13 @@ const Searching: React.FC = () => {
 
           <TabPanel>
           <form onSubmit={handleSubmit}>
-              <div className="pt-[20px]">
+              <div className="flex flex-col pt-[20px]">
                 <div className="flex text-[12px] pl-[7px]">
                   <label htmlFor="fromDomestic">Flying From</label>
                   <label className="ml-[200px]" htmlFor="toDomestic">Flying To</label>
                 </div>
                 <div className="flex">
-                  {/* ... Input fields for Domestic flights ... */}
+                  {/* ... Input fields for international flights ... */}
                   <input
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none '
                     type="text"
@@ -56,7 +56,7 @@ const Searching: React.FC = () => {
                   <label className="ml-[210px]" htmlFor="returnDomestic">Return</label>
                 </div>
                 <div className="flex">
-                  {/* ... Input fields for Domestic flights ... */}
+                  {/* ... Input fields for international flights ... */}
                   <input
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                     type="text"
@@ -176,7 +176,8 @@ const Searching: React.FC = () => {
                 </div>
 
                 <div className='text-white opacity-100'>
-                  <button className="w-[250px] h-[35px] ml-[25px] bg-blue-500 border-black border rounded " type="submit">
+                  <button className="w-[250px] h-[35px] ml-[25px] bg-blue-500 border-black border rounded "
+                   type="submit">
                     Search Flights
                   </button>
                 </div>
@@ -187,7 +188,7 @@ const Searching: React.FC = () => {
 
         {result && <div>{result}</div>}
       </div>
-    </div>
+    
   );
 };
 
