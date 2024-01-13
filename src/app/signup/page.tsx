@@ -54,7 +54,7 @@ export default function SignupPage() {
                onClick={onSignup}
                >Signup</button>
 
-            <a href="/login" className="ml-[18%] text-blue-500 hover hover:underline">Already registered? click here</a>
+            <a href="/login" className="ml-2 text-blue-500 hover hover:underline">Already registered? click here</a>
       
         </div>
       </main>      
