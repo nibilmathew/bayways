@@ -4,6 +4,7 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Searching from './components/searching'
+import FeedbackModal from './components/feedbackModal'
 
 export default function Home() {
   const carouselSettings = {
@@ -52,6 +53,7 @@ export default function Home() {
           </div>
           {/* Add more slides as needed */}
         </Slider>
+
         <div className="absolute top-0 w-full h-full flex items-center ml-[100px] pb-[30px]">
           <Searching />
         </div>
@@ -99,7 +101,7 @@ export default function Home() {
 
         <div className='flex flex-col items-center justify-center text-gray-600 text-sm font-arial space-y-2 py-[1rem]'>
         <p className='#'>Your feedback is really important, and we love hearing what you think.</p>
-        <button type='button' className='bg-white w-[6rem] p-2 rounded-lg text-black text-md font-arial border border-black hover:bg-black hover:text-white'>Feedback</button>
+        <FeedbackModal/>
         </div>
 
       </div>
@@ -109,3 +111,5 @@ export default function Home() {
     
   )
 }
+
+// <button type='button' className='bg-white w-[6rem] p-2 rounded-lg text-black text-md font-arial border border-black hover:bg-black hover:text-white'>Feedback</button>
