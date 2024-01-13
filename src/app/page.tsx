@@ -26,7 +26,7 @@ export default function Home() {
           <a href='' className='text-gray-600 text-lg font-mono hover:text-black'>Book</a>
           <a href='' className='text-gray-600 text-lg font-mono hover:text-black'>Manage</a>
           <a href='' className='text-gray-600 text-lg font-mono hover:text-black'>Help</a>
-          <a href='/signup' className='text-gray-600 text-lg font-mono hover:text-black'>Signup</a>
+          <a href='/login' className='text-gray-600 text-lg font-mono hover:text-black'>Login</a>
         </div>
       </nav>
       
