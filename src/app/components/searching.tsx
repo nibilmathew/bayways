@@ -32,7 +32,7 @@ const Searching: React.FC = () => {
                 <div className="flex">
                   {/* ... Input fields for international flights ... */}
                   <input
-                    className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none '
+                    className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none '
                     type="text"
                     id="inputValue"
                     value={inputValue}
@@ -40,7 +40,7 @@ const Searching: React.FC = () => {
                     required
                   />
                   <input
-                    className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                    className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
                     value={inputValue}
@@ -58,7 +58,7 @@ const Searching: React.FC = () => {
                 <div className="flex">
                   {/* ... Input fields for international flights ... */}
                   <input
-                    className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                    className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
                     value={inputValue}
@@ -66,7 +66,7 @@ const Searching: React.FC = () => {
                     required
                   />
                   <input
-                    className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                    className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
                     value={inputValue}
