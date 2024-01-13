@@ -24,7 +24,7 @@ const Searching: React.FC = () => {
 
           <TabPanel>
           <form onSubmit={handleSubmit}>
-              <div className="pt-[50px]">
+              <div className="pt-[20px]">
                 <div className="flex text-[12px] pl-[7px]">
                   <label htmlFor="fromDomestic">Flying From</label>
                   <label className="ml-[200px]" htmlFor="toDomestic">Flying To</label>
@@ -76,7 +76,7 @@ const Searching: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex mt-[30px]">
+              <div className="flex mt-[30px] mr-[37px] justify-center items-center">
                 <div>
                   <a className="text-[17px] font-light text-blue-800 hover:underline decoration-inherit" href="">
                     Promo Code
@@ -105,7 +105,7 @@ const Searching: React.FC = () => {
 
           <TabPanel>
             <form onSubmit={handleSubmit}>
-              <div className="pt-[50px]">
+              <div className="pt-[20px]">
                 <div className="flex text-[12px] pl-[7px]">
                   <label htmlFor="fromDomestic">Flying From</label>
                   <label className="ml-[200px]" htmlFor="toDomestic">Flying To</label>
@@ -157,7 +157,7 @@ const Searching: React.FC = () => {
                 </div>
               </div>
 
-              <div className="flex mt-[30px]">
+              <div className="flex mt-[30px] mr-[37px] justify-center items-center">
                 <div>
                   <a className="text-[17px] font-light text-blue-800 hover:underline decoration-inherit" href="">
                     Promo Code
