@@ -34,11 +34,21 @@ export default function Home() {
       {/* background image */}
       <div className="relative w-full h-[480px]">
         <Slider {...carouselSettings}>
+    
           <div>
-            <img className="w-full h-[480px]" src="./plane.jpeg" alt="background1" />
+            <img className="w-full h-[480px]" src="./plane5.jpg" alt="background1" />
           </div>
           <div>
-            <img className="w-full h-[480px]" src="./plane5.jpg" alt="background2" />
+            <img className="w-full h-[480px]" src="./city3.jpg" alt="background2" />
+          </div>
+          <div>
+            <img className="w-full h-[480px]" src="./city5.jpg" alt="background3" />
+          </div>
+          <div>
+            <img className="w-full h-[480px]" src="./city4.jpg" alt="background4" />
+          </div>
+          <div>
+            <img className="w-full h-[480px]" src="./plane6.jpg" alt="background5" />
           </div>
           {/* Add more slides as needed */}
         </Slider>
