@@ -62,7 +62,7 @@ export default function Home() {
       <div className='justify-between'>
         {/* lady flex section */}
       <div className='relative flex ml-[4rem] items-center h-[240px] w-[90%] rounded-2xl overflow-hidden mt-[40px]'>
-        <img className='w-full h-full'src='./beach.jpg' alt='lady_background'></img>
+        <img className='w-full h-full'src='./beach2.jpg' alt='lady_background'></img>
         <div className='absolute flex flex-col ml-[2rem] w-[60%] h-[78%] p-5 bg-gray-100 opacity-90'>
           <p className='text-2xl text-black font-arial font-semibold'>Never miss a deal!</p>
           <p className='text-md text-gray-600 font-arial font-normal'>Make the most of your travel experiences with our offers, get our latest updates and more by subscribing to our alerts.</p>
