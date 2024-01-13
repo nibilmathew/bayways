@@ -1,7 +1,19 @@
+"use client"
 import Image from 'next/image'
+import Slider from 'react-slick';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 import Searching from './components/searching'
 
 export default function Home() {
+  const carouselSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+  };
   return (
 
     <main className='flex flex-col w-full h-full min-h-screen bg-white'>
@@ -20,10 +32,18 @@ export default function Home() {
       
 
       {/* background image */}
-      <div className='relative w-full h-[480px]'>
-        <img className='w-full h-[480px]' src='./plane5.jpg' alt='background'></img>
-        <div className='absolute top-0  w-full h-full flex items-center ml-[100px] pb-[30px]'>
-          <Searching/>
+      <div className="relative w-full h-[480px]">
+        <Slider {...carouselSettings}>
+          <div>
+            <img className="w-full h-[480px]" src="./plane.jpeg" alt="background1" />
+          </div>
+          <div>
+            <img className="w-full h-[480px]" src="./plane5.jpg" alt="background2" />
+          </div>
+          {/* Add more slides as needed */}
+        </Slider>
+        <div className="absolute top-0 w-full h-full flex items-center ml-[100px] pb-[30px]">
+          <Searching />
         </div>
       </div>
       
