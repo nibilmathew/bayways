@@ -18,8 +18,8 @@ const Searching: React.FC = () => {
       <div className="flex flex-col bg-[#f9f8f5] text-black w-[600px] h-[300px] rounded-[15px] pl-[23px] opacity-95">
         <Tabs>
           <TabList>
-            <Tab>International</Tab>
-            <Tab>Domestic</Tab>
+          <Tab> International</Tab>
+          <Tab>Domestic</Tab>
           </TabList>
 
           <TabPanel>
@@ -95,7 +95,7 @@ const Searching: React.FC = () => {
                 </div>
 
                 <div className='text-white opacity-100'>
-                  <button className="w-[250px] h-[35px] ml-[25px] bg-blue-500 border-black border rounded " type="submit">
+                  <button className=" w-[250px] h-[35px] ml-[25px] bg-gradient-to-r from-blue-950 to-sky-600 border-black border rounded hover:from-sky-600  hover:to-blue-950" type="submit">
                     Search Flights
                   </button>
                 </div>
@@ -159,7 +159,7 @@ const Searching: React.FC = () => {
 
               <div className="flex mt-[30px] mr-[37px] justify-center items-center">
                 <div>
-                  <a className="text-[17px] font-light text-blue-800 hover:underline decoration-inherit" href="">
+                  <a className="text-[17px] font-light text-blue-900 hover:underline decoration-inherit" href="">
                     Promo Code
                   </a>
                 </div>
@@ -176,7 +176,7 @@ const Searching: React.FC = () => {
                 </div>
 
                 <div className='text-white opacity-100'>
-                  <button className="w-[250px] h-[35px] ml-[25px] bg-blue-500 border-black border rounded "
+                  <button className=" w-[250px] h-[35px] ml-[25px] bg-gradient-to-r from-blue-950 to-sky-600 border-black border rounded hover:from-sky-600  hover:to-blue-950"
                    type="submit">
                     Search Flights
                   </button>
