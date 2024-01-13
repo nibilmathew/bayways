@@ -4,6 +4,7 @@ import React, { useState,useEffect } from 'react';
 const Searching: React.FC = () => {
     const [inputValue, setInputValue] = useState<string>('');
     const [result, setResult] = useState<string | null>(null);
+    const [isChecked, setIsChecked] = useState<boolean>(false);
   
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
       event.preventDefault();
@@ -11,7 +12,6 @@ const Searching: React.FC = () => {
     };
 
   return (
-    
     <div>
       <div className="flex flex-col bg-[#f9f8f5] text-black w-[600px] h-[300px] rounded-[15px] pl-[23px] opacity-75 " >
         <div className="font-semibold pl-[50px]">International</div>
@@ -23,7 +23,7 @@ const Searching: React.FC = () => {
             </div>
             <div className="flex ">
               <input
-                className='w-[250px] h-[41px] border-black border-[1px] rounded-[5px] focus:none '
+                className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none '
                 type="text"
                 id="inputValue"
                 value={inputValue}
@@ -31,7 +31,7 @@ const Searching: React.FC = () => {
                 required
               />
               <input
-                className='ml-[10px] w-[250px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                 type="text"
                 id="inputValue"
                 value={inputValue}
@@ -47,7 +47,7 @@ const Searching: React.FC = () => {
             </div>
             <div className="flex ">
               <input
-                className='w-[250px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                 type="text"
                 id="inputValue"
                 value={inputValue}
@@ -55,7 +55,7 @@ const Searching: React.FC = () => {
                 required
               />
               <input
-                className='ml-[10px] w-[250px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
+                className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                 type="text"
                 id="inputValue"
                 value={inputValue}
@@ -64,13 +64,34 @@ const Searching: React.FC = () => {
               />
             </div>
           </div>
-          <div className='text-white opacity-100'>
-            <button className=" w-[250px] h-[35px] mt-[30px] ml-[265px] bg-blue-500 border-black border rounded " type="submit">Search Flights</button>
-          </div>
-          
+
+          <div className="flex mt-[30px]">
+         
+            <div>
+              <a className="text-[17px] font-light text-blue-800 hover:underline decoration-inherit" href="">Promo Code</a>
+            </div> 
+
+            <div className="flex ml-[30px]">
+              <input
+                type="checkbox"
+                id="checkbox"
+                checked={isChecked}
+                onChange={() => setIsChecked(!isChecked)}
+                className="w-[25px] h-[25px] mr-2"
+              />
+              <label htmlFor="checkbox" className="text-[14px]">Pay with Miles</label>
+            </div> 
+
+            <div className='text-white opacity-100'>
+              <button className=" w-[250px] h-[35px] ml-[25px] bg-blue-500 border-black border rounded " type="submit">Search Flights</button>
+            </div>
+
+        </div>
         </form>
 
         {result && <div>{result}</div>}
+        
+         
       </div>
     </div>
   )
