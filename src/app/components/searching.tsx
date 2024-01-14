@@ -4,14 +4,35 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 
 const Searching: React.FC = () => {
-  const [inputValue, setInputValue] = useState<string>('');
-  const [result, setResult] = useState<string | null>(null);
+  const [intlFromValue, setIntlFromValue] = useState<string>('');
+  const [intlToValue, setIntlToValue] = useState<string>('');
+  const [intlOutboundValue, setIntlOutboundValue] = useState<string>('');
+  const [intlReturnValue, setIntlReturnValue] = useState<string>('');
+
+  const [domesticFromValue, setDomesticFromValue] = useState<string>('');
+  const [domesticToValue, setDomesticToValue] = useState<string>('');
+  const [domesticOutboundValue, setDomesticOutboundValue] = useState<string>('');
+  const [domesticReturnValue, setDomesticReturnValue] = useState<string>('');
+
+  const [findFlightOption, setFindFlightOption] = useState<'flightNumber' | 'fromTo'>('flightNumber');
+  const [findFlightValue, setFindFlightValue] = useState<string>('');
+  const [findFlightDepartureDate, setFindFlightDepartureDate] = useState<string>('');
+  const [findFlightNumberValue, setFindFlightNumberValue] = useState<string>('');
+  const [findFlightFromValue, setFindFlightFromValue] = useState<string>('');
+  const [findFlightToValue, setFindFlightToValue] = useState<string>('');
+
   const [isChecked, setIsChecked] = useState<boolean>(false);
-   const [searchOption, setSearchOption] = useState<'flightNumber' | 'fromTo'>('flightNumber');
+  const [result, setResult] = useState<string | null>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setResult(`Entered Value: ${inputValue}`);
+    
+    const value =
+      findFlightOption === 'flightNumber'
+        ? findFlightNumberValue
+        : `${findFlightFromValue} - ${findFlightToValue}`;
+
+    setResult(`Entered Value: ${value}`);
   };
 
   return (
@@ -37,16 +58,16 @@ const Searching: React.FC = () => {
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none '
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={intlFromValue}
+                    onChange={(e) => setIntlFromValue(e.target.value)}
                     required
                   />
                   <input
                     className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={intlToValue}
+                    onChange={(e) => setIntlToValue(e.target.value)}
                     required
                   />
                 </div>
@@ -63,16 +84,16 @@ const Searching: React.FC = () => {
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={intlOutboundValue}
+                    onChange={(e) => setIntlOutboundValue(e.target.value)}
                     required
                   />
                   <input
                     className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:outline-none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={intlReturnValue}
+                    onChange={(e) => setIntlReturnValue(e.target.value)}
                     required
                   />
                 </div>
@@ -118,16 +139,16 @@ const Searching: React.FC = () => {
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none '
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={domesticFromValue}
+                    onChange={(e) => setDomesticFromValue(e.target.value)}
                     required
                   />
                   <input
                     className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={domesticToValue}
+                    onChange={(e) => setDomesticToValue(e.target.value)}
                     required
                   />
                 </div>
@@ -144,16 +165,16 @@ const Searching: React.FC = () => {
                     className='w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={domesticOutboundValue}
+                    onChange={(e) => setDomesticOutboundValue(e.target.value)}
                     required
                   />
                   <input
                     className='ml-[10px] w-[260px] h-[41px] border-black border-[1px] rounded-[5px] focus:none'
                     type="text"
                     id="inputValue"
-                    value={inputValue}
-                    onChange={(e) => setInputValue(e.target.value)}
+                    value={domesticReturnValue}
+                    onChange={(e) => setDomesticReturnValue(e.target.value)}
                     required
                   />
                 </div>
@@ -189,13 +210,13 @@ const Searching: React.FC = () => {
           
           <TabPanel>
           <form onSubmit={handleSubmit}>
-          <div className="flex mt-[15px]">
+            <div className="flex mt-[15px]">
               <label>
                 <input
                   type="radio"
                   value="flightNumber"
-                  checked={searchOption === 'flightNumber'}
-                  onChange={() => setSearchOption('flightNumber')}
+                  checked={findFlightOption === 'flightNumber'}
+                  onChange={() => setFindFlightOption('flightNumber')}
                 />
                 Flight Number
               </label>
@@ -203,33 +224,31 @@ const Searching: React.FC = () => {
                 <input
                   type="radio"
                   value="fromTo"
-                  checked={searchOption === 'fromTo'}
-                  onChange={() => setSearchOption('fromTo')}
+                  checked={findFlightOption === 'fromTo'}
+                  onChange={() => setFindFlightOption('fromTo')}
                 />
                 Origin/Destination
               </label>
             </div>
             <div className="pt-[20px]">
               <div className="flex">
-                {/* ... Input fields for Origin/Destination ... */}
-                {searchOption === 'fromTo' ? (
+                {/* ... Input fields for Origin/Destination or Flight Number ... */}
+                {findFlightOption === 'fromTo' ? (
                   <React.Fragment>
                     <input
                       className='w-[260px] h-[41px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
                       type="text"
                       placeholder="From*"
-                      id="inputValue"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
+                      value={findFlightFromValue}
+                      onChange={(e) => setFindFlightFromValue(e.target.value)}
                       required
                     />
                     <input
                       className='w-[260px] h-[41px] ml-[15px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
                       type="text"
                       placeholder="To*"
-                      id="inputValue"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
+                      value={findFlightToValue}
+                      onChange={(e) => setFindFlightToValue(e.target.value)}
                       required
                     />
                   </React.Fragment>
@@ -239,9 +258,8 @@ const Searching: React.FC = () => {
                       className='w-[260px] h-[41px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
                       type="text"
                       placeholder="Flight Number*"
-                      id="inputValue"
-                      value={inputValue}
-                      onChange={(e) => setInputValue(e.target.value)}
+                      value={findFlightNumberValue}
+                      onChange={(e) => setFindFlightNumberValue(e.target.value)}
                       required
                     />
                   </React.Fragment>
@@ -258,9 +276,8 @@ const Searching: React.FC = () => {
                 <input
                   className='w-[260px] h-[41px] border-black pl-[10px] border-[1px] rounded-[5px] focus:none'
                   type="text"
-                  id="inputValue"
-                  value={inputValue}
-                  onChange={(e) => setInputValue(e.target.value)}
+                  value={findFlightDepartureDate}
+                  onChange={(e) => setFindFlightDepartureDate(e.target.value)}
                   required
                 />
               </div>
