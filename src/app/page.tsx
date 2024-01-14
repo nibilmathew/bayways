@@ -1,23 +1,26 @@
 "use client"
 import Image from 'next/image'
+import Head from 'next/head'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Searching from './components/searching'
 import FeedbackModal from './components/feedbackModal'
+import Thoughts from './components/thoughts'
 
 export default function Home() {
   const carouselSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 550,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
   };
   return (
-
+    
     <main className='flex flex-col w-full h-full min-h-screen bg-white'>
+
       {/* navigation bar */}
       <nav className='flex items-center justify-between bg-white px-[4rem] py-2'>
         <div>
@@ -34,6 +37,7 @@ export default function Home() {
 
       {/* background image */}
       <div className="relative w-full h-[480px]">
+        <div>
         <Slider {...carouselSettings}>
     
           <div>
@@ -53,10 +57,18 @@ export default function Home() {
           </div>
           {/* Add more slides as needed */}
         </Slider>
+        </div>
 
+        {/* Searching component */}
         <div className="absolute top-0 w-full h-full flex items-center ml-[100px] pb-[30px]">
           <Searching />
         </div>
+
+        {/* Thoughts component */}
+        <div className='absolute top-0 w-[350px] h-[200px]  mt-[120px] ml-[900px]'>
+          <Thoughts/>
+        </div>
+        
       </div>
       
       <div className='justify-between'>
@@ -111,5 +123,6 @@ export default function Home() {
     
   )
 }
+
 
 // <button type='button' className='bg-white w-[6rem] p-2 rounded-lg text-black text-md font-arial border border-black hover:bg-black hover:text-white'>Feedback</button>
