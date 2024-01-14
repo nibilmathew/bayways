@@ -7,6 +7,7 @@ const Searching: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
   const [result, setResult] = useState<string | null>(null);
   const [isChecked, setIsChecked] = useState<boolean>(false);
+   const [searchOption, setSearchOption] = useState<'flightNumber' | 'fromTo'>('flightNumber');
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -20,6 +21,7 @@ const Searching: React.FC = () => {
           <TabList>
           <Tab> International</Tab>
           <Tab>Domestic</Tab>
+          <Tab>Find Flight</Tab>
           </TabList>
 
           <TabPanel>
@@ -184,6 +186,96 @@ const Searching: React.FC = () => {
               </div>
             </form>
           </TabPanel>
+          
+          <TabPanel>
+          <form onSubmit={handleSubmit}>
+          <div className="flex mt-[15px]">
+              <label>
+                <input
+                  type="radio"
+                  value="flightNumber"
+                  checked={searchOption === 'flightNumber'}
+                  onChange={() => setSearchOption('flightNumber')}
+                />
+                Flight Number
+              </label>
+              <label className="ml-[20px]">
+                <input
+                  type="radio"
+                  value="fromTo"
+                  checked={searchOption === 'fromTo'}
+                  onChange={() => setSearchOption('fromTo')}
+                />
+                Origin/Destination
+              </label>
+            </div>
+            <div className="pt-[20px]">
+              <div className="flex">
+                {/* ... Input fields for Origin/Destination ... */}
+                {searchOption === 'fromTo' ? (
+                  <React.Fragment>
+                    <input
+                      className='w-[260px] h-[41px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
+                      type="text"
+                      placeholder="From*"
+                      id="inputValue"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      required
+                    />
+                    <input
+                      className='w-[260px] h-[41px] ml-[15px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
+                      type="text"
+                      placeholder="To*"
+                      id="inputValue"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      required
+                    />
+                  </React.Fragment>
+                ) : (
+                  <React.Fragment>
+                    <input
+                      className='w-[260px] h-[41px] pl-[10px] border-black border-[1px] rounded-[5px] focus:none '
+                      type="text"
+                      placeholder="Flight Number*"
+                      id="inputValue"
+                      value={inputValue}
+                      onChange={(e) => setInputValue(e.target.value)}
+                      required
+                    />
+                  </React.Fragment>
+                )}
+              </div>
+            </div>
+
+            <div className="mt-[15px]">
+              <div className="text-[12px] pl-[7px]">
+                <label htmlFor="departureDate">Departure Date</label>
+              </div>
+              <div className="flex">
+                {/* ... Input fields for Departure date ... */}
+                <input
+                  className='w-[260px] h-[41px] border-black pl-[10px] border-[1px] rounded-[5px] focus:none'
+                  type="text"
+                  id="inputValue"
+                  value={inputValue}
+                  onChange={(e) => setInputValue(e.target.value)}
+                  required
+                />
+              </div>
+            </div>
+
+            <div className="flex mt-[30px] justify-start">
+              <div className='text-white opacity-100'>
+                <button className=" w-[65px] h-[40px] p-2 bg-gradient-to-r from-blue-950 to-sky-600 border-black border rounded hover:from-sky-600  hover:to-blue-950"
+                  type="submit">
+                  Find
+                </button>
+              </div>
+            </div>
+          </form>
+        </TabPanel>
         </Tabs>
 
         {result && <div>{result}</div>}
