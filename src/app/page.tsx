@@ -1,5 +1,6 @@
 "use client"
 import Image from 'next/image'
+import Head from 'next/head'
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -16,8 +17,9 @@ export default function Home() {
     autoplay: true,
   };
   return (
-
+    
     <main className='flex flex-col w-full h-full min-h-screen bg-white'>
+
       {/* navigation bar */}
       <nav className='flex items-center justify-between bg-white px-[4rem] py-2'>
         <div>
@@ -111,5 +113,6 @@ export default function Home() {
     
   )
 }
+
 
 // <button type='button' className='bg-white w-[6rem] p-2 rounded-lg text-black text-md font-arial border border-black hover:bg-black hover:text-white'>Feedback</button>
