@@ -6,12 +6,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import Searching from './components/searching'
 import FeedbackModal from './components/feedbackModal'
+import Thoughts from './components/thoughts'
 
 export default function Home() {
   const carouselSettings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 550,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
@@ -36,6 +37,7 @@ export default function Home() {
 
       {/* background image */}
       <div className="relative w-full h-[480px]">
+        <div>
         <Slider {...carouselSettings}>
     
           <div>
@@ -55,10 +57,18 @@ export default function Home() {
           </div>
           {/* Add more slides as needed */}
         </Slider>
+        </div>
 
+        {/* Searching component */}
         <div className="absolute top-0 w-full h-full flex items-center ml-[100px] pb-[30px]">
           <Searching />
         </div>
+
+        {/* Thoughts component */}
+        <div className='absolute top-0 w-[350px] h-[200px]  mt-[120px] ml-[900px]'>
+          <Thoughts/>
+        </div>
+        
       </div>
       
       <div className='justify-between'>
