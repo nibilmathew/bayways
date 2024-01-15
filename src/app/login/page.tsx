@@ -1,17 +1,29 @@
 "use client";
-import Link from "next/link";
+import {useState} from 'react'
+import {useSignInWithEmailAndPassword} from 'react-firebase-hooks/auth'
+import {auth} from '../firebase/config'
 import React from "react";
 import { useRouter } from "next/navigation";
 import {Axios} from "axios";
 
 export default function LoginPage() {
-    const [user, setUser] = React.useState({
-        email: "",
-        password: ""
-    })
+
+    const[email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const[signInWithEmailAndPassword] = useSignInWithEmailAndPassword(auth)
+    const router = useRouter()
 
     const onLogin =async () => {
-      
+      try {
+        const res = await signInWithEmailAndPassword(email,password)
+        console.log({res})
+        setEmail('')
+        setPassword('');
+        router.push('/')
+      }catch(e){
+        console.error(e)
+      }
     }
 
     return (
@@ -24,10 +36,10 @@ export default function LoginPage() {
             
             <label htmlFor="email">email</label>
             <input className="rounded-lg border-none p-1 focus:outline-none" 
-              type="text"
+              type="email"
               id = "email"
-              value={user.email}
-              onChange={(e) => setUser({...user,email: e.target.value})}
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="email"
               />
 
@@ -35,8 +47,8 @@ export default function LoginPage() {
             <input className="rounded-lg border-none p-1 focus:outline-none" 
               type="password"
               id = "password"
-              value={user.password}
-              onChange={(e) => setUser({...user,password: e.target.value})}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="password"
               />
 
